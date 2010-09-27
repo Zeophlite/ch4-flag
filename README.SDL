@@ -1,0 +1,22 @@
+This is a SDL port, made by Daniel Skates, of chapter 4 from Joe Groff's OpenGL tutorial:
+http://duriansoftware.com/joe/An-intro-to-modern-OpenGL.-Chapter-4:-Rendering-a-Dynamic-3D-Scene-with-Phong-Shading.html
+
+Note that this port has extensive changes.  See http://github.com/Zeophlite/hello-gl and http://github.com/Zeophlite/hello-gl-ch3 for simpler examples of SDL ports. 
+
+SDL is a cross platform, multimedia, low level library (see http://www.libsdl.org for more information).
+sdl.c contains the bulk of the interactions with SDL.
+
+Download from the LibSDL website the following:
+SDL-devel-1.2.14-mingw32.tar.gz (Mingw32)
+
+Then add to your include directories:
+SDL-devel-1.2.14-mingw32/SDL-1.2.14/include
+
+And link with:
+glew32s.lib
+libopengl32.a
+libmingw32.a
+SDL-devel-1.2.14-mingw32/SDL-1.2.14/lib/libSDLmain.a
+SDL-devel-1.2.14-mingw32/SDL-1.2.14/lib/libSDL.dll.a
+
+A limitation of this is that you have to statically link glew, and use the glewIsSupported method instead.
